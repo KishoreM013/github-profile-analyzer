@@ -1,0 +1,187 @@
+.dashboard-root { display: flex; flex-direction: column; min-height: 100vh; background: #0f172a; color: white; }
+.layout-grid { display: grid; grid-template-columns: 380px 1fr; gap: 20px; padding: 20px; flex-grow: 1; }
+
+.card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+
+.progress-bg { background: #334155; height: 8px; border-radius: 4px; overflow: hidden; margin: 8px 0; }
+.progress-fill { background: #6366f1; height: 100%; border-radius: 4px; }
+.progress-fill.green { background: #10b981; }
+
+.file-node { margin-left: 12px; font-family: 'Fira Code', monospace; font-size: 13px; }
+.node-label { display: flex; align-items: center; gap: 8px; padding: 4px; cursor: pointer; border-radius: 4px; }
+.node-label:hover { background: rgba(255,255,255,0.05); }
+
+.repo-scroll-area {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-top: 15px;
+}
+
+/* Custom Scrollbar for that Pro Look */
+.repo-scroll-area::-webkit-scrollbar { width: 5px; }
+.repo-scroll-area::-webkit-scrollbar-track { background: transparent; }
+.repo-scroll-area::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+
+.repo-card-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.repo-card-mini:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+}
+
+.repo-card-mini.active {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.lang-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+
+.custom-tooltip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.custom-tooltip .label {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  font-size: 14px;
+}
+
+.custom-tooltip .sub {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 4px 0 0 0;
+}
+
+.tech-summary {
+  margin-top: 15px;
+  text-align: center;
+  border-top: 1px solid #334155;
+  padding-top: 15px;
+}
+
+.primary-focus {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+
+
+.profile-header-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.header-main {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar-wrapper {
+  position: relative;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  border: 3px solid #6366f1;
+  padding: 4px;
+  background: #0f172a;
+  object-fit: cover;
+}
+
+.hireable-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+.ai-verdict-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid;
+}
+
+.score-display {
+  margin-left: auto;
+  text-align: center;
+}
+
+.circular-chart {
+  width: 90px;
+  height: 90px;
+}
+
+.circle-bg { fill: none; stroke: #334155; stroke-width: 2.5; }
+.circle { fill: none; stroke-width: 2.5; stroke-linecap: round; transition: stroke-dasharray 1s ease-out; }
+.percentage { fill: white; font-size: 9px; font-weight: bold; text-anchor: middle; }
+
+.header-footer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 20px;
+}
+
+.footer-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-stat strong { display: block; font-size: 18px; color: white; }
+.footer-stat span { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+
